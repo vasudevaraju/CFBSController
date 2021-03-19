@@ -16,7 +16,7 @@ namespace control
 		arma::vec advanceMinorStep(int stpNum, double stpSize);
 	private:
 		arma::vec (T::* derivative)(int);				// Method to call the derivative of a variable from an object
-		arma::vec yn1_							// The value of the variable y being integrated at (n-1)
+		arma::vec yn1_;							// The value of the variable y being integrated at (n-1)
 		T* integrateCaller_;						// The object whose variables are being integrated
 		arma::vec f0_; arma::vec f1_; arma::vec f2_; arma::vec f3_;	// Stores the derivatives of the variable during integration timesteps
 	};
