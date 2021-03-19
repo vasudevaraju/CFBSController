@@ -7,5 +7,5 @@ To build the project, navigate to the directory of the Controller and run the fo
 mkdir build\
 cd build \
 cmake ..\
-make \
+make
 
