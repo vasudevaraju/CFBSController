@@ -5,7 +5,7 @@ namespace simulation
 	Simulation::Simulation(double simTime, double stpSize,double* modelParams, arma::mat K1, arma::mat K2):modelParams_(modelParams),
 		simTime_(simTime),stpSize_(stpSize), states_(new double[38]), inputs_(new double[18]),			// Sensor and actuator memory locations
 		plant_(new plant::SimulinkPlant(54320, 54330,states_, inputs_)),						// Initialize plant on heap
-		controller_(new control::Controller((double*)modelParams_, K1, K2, *plant_, stpSize_,states_,inputs_)) 	// Initialize controller on heap 
+		controller_(new control::Controller((double*)modelParams_, K1, K2, stpSize_,states_,inputs_)) 	// Initialize controller on heap 
 	{
 	  //Do nothing
 	};
