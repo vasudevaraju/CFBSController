@@ -10,7 +10,7 @@ To build the project, navigate to the directory of the Controller and run the fo
 `make`
 
 # Running the project
-1. Download the [HILSimulink] folder into the Target hardware on which a suitable version of Matlab/ Simulink exists. The Simulink model was created in Matlab 2019a. 
+1. Download the `HILSimulink` folder into the Target hardware on which a suitable version of Matlab/ Simulink exists. The Simulink model was created in Matlab 2019a. 
 2. Edit the IP address field in the Send TC/IP and Receive TCP/IP blocks in the Simulink model to the IP address of the hardware on which the Controller will be run.
 3. Once the project is built on the controller hardware, `./controllerCpp` in the console to run the executable. This will initialize a server on the controller and put it into      listening mode
 4. Run the Simulink model on the target hardware in paced-mode (real-time). Ensure that the controller's server is listening for connections before running the Simulink model. Otherwise, the Simulink's clients will timeout 
